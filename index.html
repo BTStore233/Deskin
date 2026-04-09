@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hướng dẫn cài đặt DeskIn trên Windows</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    .hero {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      padding: 56px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: 36px;
+    }
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+    .hero .hero-buttons {
+      margin-top: 22px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero .hero-buttons a {
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    .hero .primary-btn {
+      background: white;
+      color: #1d4ed8;
+    }
+    .hero .secondary-btn {
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
+      background: rgba(255,255,255,0.08);
+    }
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .intro {
+      margin-top: -28px;
+    }
+    .overview {
+      margin-top: 24px;
+      overflow: hidden;
+    }
+    .overview h2,
+    .intro h2,
+    .tips h3,
+    .cta h3 {
+      margin-top: 0;
+    }
+    .overview-image {
+      margin-top: 16px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+    .steps-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 26px;
+    }
+    .step {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      border: 1px solid #edf2f7;
+    }
+    .step-content {
+      padding: 24px;
+    }
+    .step-number {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    .step h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+    }
+    .step p {
+      margin-top: 0;
+      color: #4b5563;
+    }
+    .step ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+    .step li + li { margin-top: 8px; }
+    .step-image {
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      padding: 18px;
+      border-left: 1px solid #edf2f7;
+    }
+    .step-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .step-image img:hover {
+      transform: scale(1.02);
+    }
+    .tips {
+      background: #eff6ff;
+      border-left: 5px solid #2563eb;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 28px;
+    }
+    .cta {
+      background: #111827;
+      color: white;
+      padding: 28px;
+      border-radius: 16px;
+      margin-top: 32px;
+      text-align: center;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 42px 18px; }
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 16px; }
+      .step { grid-template-columns: 1fr; }
+      .step-image {
+        min-height: auto;
+        border-left: none;
+        border-top: 1px solid #edf2f7;
+      }
+      .card,
+      .step-content,
+      .step-image { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Hướng dẫn cài đặt DeskIn trên Windows</h1>
+    <p>Các bước đơn giản giúp bạn tải, cài đặt và sử dụng DeskIn để điều khiển máy tính từ xa nhanh chóng, dễ hiểu và có ảnh minh họa trực quan.</p>
+    <div class="hero-buttons">
+      <a href="#cac-buoc" class="primary-btn">Xem các bước cài đặt</a>
+      <a href="#lien-he" class="secondary-btn">Hỗ trợ cài đặt</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="intro card">
+      <h2>DeskIn là gì?</h2>
+      <p>DeskIn là phần mềm điều khiển máy tính từ xa, hỗ trợ kết nối nhanh, ổn định và dễ sử dụng. Bài viết này hướng dẫn bạn cài DeskIn trên Windows từng bước, kèm ảnh minh họa thực tế để dễ thao tác hơn.</p>
+    </section>
+
+    <section class="overview card">
+      <h2>Tổng quan 5 bước cài đặt</h2>
+      <p>Dưới đây là hình minh họa tổng hợp toàn bộ quy trình từ tải phần mềm đến kết nối máy tính từ xa bằng DeskIn.</p>
+      <div class="overview-image">
+        <img src="a_set_of_five_instructional_digital_screenshots_il.png" alt="Tổng hợp 5 bước cài đặt DeskIn trên Windows">
+      </div>
+    </section>
+
+    <div class="steps-grid" id="cac-buoc">
+      <section class="step">
+        <div class="step-content">
+          <div class="step-number">Bước 1</div>
+          <h2>Tải DeskIn từ trang chủ</h2>
+          <p>Mở trình duyệt và truy cập website chính thức của DeskIn để tải đúng phiên bản cho Windows.</p>
+          <ul>
+            <li>Truy cập website chính thức của DeskIn.</li>
+            <li>Chọn phiên bản dành cho Windows.</li>
+            <li>Nhấn tải file cài đặt về máy.</li>
+          </ul>
+        </div>
+        <div class="step-image">
+          <img src="images/buoc1.png" alt="Minh họa bước 1 tải DeskIn từ trang chủ">
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-content">
+          <div class="step-number">Bước 2</div>
+          <h2>Mở file cài đặt</h2>
+          <p>Sau khi tải xong, bạn mở thư mục Downloads và chạy file cài đặt để bắt đầu quá trình thiết lập.</p>
+          <ul>
+            <li>Vào thư mục Downloads.</li>
+            <li>Nhấp đúp vào file cài đặt <strong>.exe</strong>.</li>
+            <li>Chọn <strong>Yes</strong> nếu Windows hiển thị cảnh báo bảo mật.</li>
+          </ul>
+        </div>
+        <div class="step-image">
+          <img src="images/buoc2.png" alt="Minh họa bước 2 mở file cài đặt DeskIn">
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-content">
+          <div class="step-number">Bước 3</div>
+          <h2>Tiến hành cài đặt</h2>
+          <p>Trình cài đặt sẽ hiện ra. Bạn chỉ cần xác nhận vài bước đơn giản để hoàn tất.</p>
+          <ul>
+            <li>Nhấn <strong>Next</strong> để tiếp tục.</li>
+            <li>Chọn <strong>Install</strong> để bắt đầu cài.</li>
+            <li>Chờ vài giây đến khi hoàn tất và nhấn <strong>Finish</strong>.</li>
+          </ul>
+        </div>
+        <div class="step-image">
+          <img src="images/buoc3.png" alt="Minh họa bước 3 cài đặt DeskIn trên Windows">
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-content">
+          <div class="step-number">Bước 4</div>
+          <h2>Mở DeskIn và xem ID, mật khẩu</h2>
+          <p>Sau khi cài xong, mở phần mềm để kiểm tra giao diện chính và lấy thông tin kết nối.</p>
+          <ul>
+            <li>Mở phần mềm DeskIn sau khi cài xong.</li>
+            <li>Đăng nhập hoặc tạo tài khoản nếu cần.</li>
+            <li>Ghi lại ID và mật khẩu để kết nối từ xa.</li>
+          </ul>
+        </div>
+        <div class="step-image">
+          <img src="images/buoc4.png" alt="Minh họa bước 4 giao diện chính DeskIn">
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-content">
+          <div class="step-number">Bước 5</div>
+          <h2>Kết nối điều khiển máy tính từ xa</h2>
+          <p>Nhập ID và mật khẩu của máy cần điều khiển, sau đó nhấn nút kết nối để bắt đầu sử dụng.</p>
+          <ul>
+            <li>Nhập ID của máy cần kết nối.</li>
+            <li>Nhập mật khẩu được cung cấp.</li>
+            <li>Nhấn <strong>Kết nối</strong> để bắt đầu điều khiển.</li>
+          </ul>
+        </div>
+        <div class="step-image">
+          <img src="images/buoc5.png" alt="Minh họa bước 5 kết nối DeskIn từ xa">
+        </div>
+      </section>
+    </div>
+
+    <div class="tips">
+      <h3>Lưu ý quan trọng</h3>
+      <p>Chỉ chia sẻ ID và mật khẩu cho người đáng tin cậy. Khi đăng bài lên website hoặc landing page, bạn có thể thay nút liên hệ bằng số điện thoại, Zalo hoặc link Facebook của mình.</p>
+    </div>
+
+    <div class="cta" id="lien-he">
+      <h3>Cần hỗ trợ cài đặt DeskIn?</h3>
+      <p>Liên hệ với bạn để được hỗ trợ nhanh hoặc dùng phần nội dung này để đăng website, fanpage và landing page.</p>
+      <a href="#">Liên hệ ngay</a>
+    </div>
+
+    <div class="footer">
+      © 2026 - Bài hướng dẫn cài đặt DeskIn trên Windows
+    </div>
+  </main>
+</body>
+</html>
